@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', url: 'https://github.com/Naveenkrishna2002/DevOps-Project-Swiggy.git'
+                git branch: 'main', credentialsId: 'git-creds', url: 'https://github.com/Naveenkrishna2002/DevOps-Project-Swiggy.git'
             }
         }
         stage("Sonarqube Analysis "){
